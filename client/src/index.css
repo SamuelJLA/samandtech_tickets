@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-samand-navy: #1E293B;
+  --color-samand-cyan: #11C6EA;
+  --color-samand-teal: #00877D;
+}
+
+/* Efecto Glassmorphism forzado */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 135, 125, 0.08) !important;
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(17, 198, 234, 0.15) !important;
+}
+
+/* Scrollbar estilizado */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00877D;
+}
+
+/* Ajustes de FullCalendar para Glassmorphism */
+.fc {
+  --fc-border-color: rgba(255, 255, 255, 0.4);
+  --fc-button-bg-color: #1E293B;
+  --fc-button-border-color: transparent;
+  --fc-button-hover-bg-color: #0f172a;
+  --fc-button-active-bg-color: #00877D;
+  --fc-today-bg-color: rgba(17, 198, 234, 0.1);
+  font-size: 0.75rem;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 0.95rem !important;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #475569;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #334155;
+  font-weight: 700;
+  padding: 4px 8px;
+}
+
+.fc-event {
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 2px 4px !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
